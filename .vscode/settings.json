@@ -2,5 +2,6 @@
 {
     "editor.fontWeight": "600",
     "editor.fontFamily": "'Courier New', 'Droid Sans Mono', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "view-in-browser.customBrowser": "google chrome"
 }
