@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height:1500px;
+        }
+        .close{
+            width:100%;
+            height:100%;
+            background:rgba(255,255,0,0.5);
+            position: fixed;
+            left:0;
+            top:0;
+            visibility: hidden;
+            /*visibility: visible;*/
+        }
+        .name{
+            visibility: visible;!important;
+        }
+        #open .model{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            background-color: pink;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            top:0;
+            transform:translate(-50%,-50%);
+            z-index: 999;
+
+        }
+
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<a href="#" id="opening">点击打开</a>
+<div id="open" class="close">
+    <div class="model">
+        <h2>你好</h2>
+        <p>hellow world</p>
+        <p>2017</p>
+        <a href="#" id="close"></a>
+    </div>
+</div>
+<script>
+    $('#opening').click(function () {
+        $('#open').addClass("name");
+        $('.model').animate({top:'50%'},1000);
+    })
+    $('#open').click(function () {
+//        console.log(event.target);
+        x = event.target;
+       if(x.id =='open'){
+           $('#open').removeClass("name");
+           $('.model').css('top','0');
+       }
+    })
+</script>
+</body>
+</html>
