@@ -6,19 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./jquery.min.js"></script>
+    <script src="./table.js"></script>
 </head>
 
 <body>
+    <table id="table">
+
+    </table>
     <script>
-        $.ajax({
-            url:'',
-            type:'POST',
-            contentType:'application/json',
-                success:function(){
+        // $.ajax({
+        //     url: '',
+        //     type: 'POST',
+        //     contentType: 'application/json',
+        //     success: function(data) {
+        //         $('#table').html('<tr>' + '<td>' + data + '</td>' + '</tr>');
 
-        }
-        })
-
+        //     }
+        // })
+        $('#table').append('<tr>' +
+            '<td>' + table.name + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>' + table.age + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>' + table.car + '</td>' +
+            '</tr>'
+        )
     </script>
 </body>
 
